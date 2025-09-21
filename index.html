@@ -427,25 +427,27 @@
                     </a>
                 </li>
             </ul>
+            <!-- Subscribe-form -->
+            <div class="footer-form-container">
+                <p class="footer-form-text">Subscribe</p>
+                <!-- Footer-form -->
+                <form class="footer-form">
+                    <label class="footer-form-label">
+                        <input class="footer-input" type="email" name="user-email" placeholder="E-mail" />
+                    </label>
+                    <!-- Footer-button -->
+                    <button class="footer-form-button" type="submit">
+                        Subscribe
+                        <svg class="footer-icon" width="24" height="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
             </div>
         </div>
-    <!-- Subscribe-form -->
-    <div class="footer-form-container">
-        <p class="footer-form-text">Subscribe</p>
-        <!-- Footer-form -->
-        <form class="footer-form">
-            <label class="footer-form-label">
-                <input class="footer-input" type="email" name="user-email" placeholder="E-mail" />
-            </label>
-            <!-- Footer-button -->
-            <button class="footer-form-button" type="submit">
-                Subscribe
-                <svg class="footer-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-            </button>
-        </form>
-    </div>
+
+    
     </footer>
 
        <!-- Backdrop - cірий фон-->
@@ -516,7 +518,7 @@
                     <!-- 5 поле Checkbox -->
                     <div class="check-input-label">
                         <input class="check visually-hidden" name="user-privacy"  id="user-privacy" type="checkbox" value="true">
-                        <label class="form-label"  for="user-privacy">Text input<span class="check-box">
+                        <label class="form-label"  for="user-privacy"><span class="check-box">
                                 <svg class="icon-check" width="10" height="8">
                                     <use href="./images/icons.svg#icon-ok"></use>
                                 </svg>
@@ -526,10 +528,8 @@
                         </label>
                     </div>
                     <!-- Кнопка -->
-                    <div class="button-info">
-                        <button class="button-modal" type="submit">Send</button>
-                    </div>
-                </form>
+                    <button class="button-modal" type="submit">Send</button>
+                    </form>
             </div>
         </div>
     </body>
