@@ -704,6 +704,7 @@ p{font-size: 12px;
 /* Subscribe-form */
 .footer-form{
     display: flex;
+    gap: 24px;
 }
 .footer-input {
     font-family: "Roboto", sans-serif;
@@ -713,6 +714,13 @@ p{font-size: 12px;
     letter-spacing: 0.04em;
     color: #fff;
     background-color: #2e2f42;
+    width: 264px; 
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 .footer-form-label {
     margin-left: 80px;
@@ -745,6 +753,10 @@ p{font-size: 12px;
     min-width: 165px;
     height: 40px;
     margin-left: 24px;
+    font-weight: 500; 
+    line-height: 1.5;  
+    letter-spacing: 0.04em;
+    color: #ffffff; 
 }
 .footer-text {
     font-weight: 500;
@@ -753,6 +765,9 @@ p{font-size: 12px;
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
+}
+.footer-icon{
+    margin-left: 16px;
 }
 
 /*---Модальне вікно--*/
@@ -863,8 +878,11 @@ p{font-size: 12px;
     padding-left: 38px;
     padding-right: 16px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
 }
+ /* Стиль при фокусі */
+ .modal-form-input:focus {
+     border-color: #4d5ae5;
+ }
 
 .input-wrapper .input-icon:hover,
 .input-wrapper .input-icon:focus {
@@ -877,14 +895,16 @@ p{font-size: 12px;
     position: absolute;
     left: 16px;
     top: 50%;
-    transform: translatey(-50%);
-    fill: #2e2f42;
+    transform: translateY(-50%);
+    fill: #2e2f42; /* базовий колір */
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-icon:hover,
-.input-icon:focus {
-     fill: #4D5AE5;
-}
+ /* Іконка змінює колір при фокусі інпута */
+ .modal-form-input:focus+.input-icon {
+     fill: #4d5ae5;
+ }
+
+
 
 .modal-input-label {
     font-family: "Roboto", sans-serif;
@@ -924,6 +944,7 @@ p{font-size: 12px;
 }
 .textarea-label-modal{
    margin-bottom: 16px;
+   border: 1px solid rgba(46, 47, 66, 0.4)
 }
 
  .textarea-label-modal .modal-form-text{
@@ -958,9 +979,25 @@ p{font-size: 12px;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
- .checked{
-background-color: #404bbf;
+
+.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.icon-check {
+    fill: transparent;
+}
+ /* checked-стан */
+ .check:checked+.check-box {
+     background-color: var(--accent-color, #404bbf);
+     border: none;
  }
+
+ .check:checked+.check-box .icon-check {
+     fill: var(--light-color, #f4f4fd);
+ }
+
 .form-label {
     font-size: 12px;
     line-height: 1.17;
@@ -984,6 +1021,7 @@ background-color: #404bbf;
     }
 
 .button-modal {
+    display: block;
     font-family: "Roboto", sans-serif;
     min-width: 169px;
     height: 56px;
@@ -998,6 +1036,6 @@ background-color: #404bbf;
     border-radius: 4px;
     padding: 16px 32px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: none;   
    }
