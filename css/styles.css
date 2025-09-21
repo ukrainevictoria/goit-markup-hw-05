@@ -944,16 +944,19 @@ p{font-size: 12px;
 }
 .textarea-label-modal{
    margin-bottom: 16px;
-   border: 1px solid rgba(46, 47, 66, 0.4)
+   
 }
 
  .textarea-label-modal .modal-form-text{
         fill: rgba(46, 47, 66, 0.4);
     }
-     
+.modal-form-text{
+  width: 100% ;
+  border: 1px solid rgba(46, 47, 66, 0.4)
+}
     /* 5 поле Checkbox */
 
-.check-input-label {
+/* .check-input-label {
     margin-bottom: 24px;
 }
 
@@ -974,8 +977,6 @@ p{font-size: 12px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     margin-right: 8px;
-    
-    border: none;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -989,7 +990,7 @@ p{font-size: 12px;
     fill: transparent;
 }
  /* checked-стан */
- .check:checked+.check-box {
+ /* .check:checked+.check-box {
      background-color: var(--accent-color, #404bbf);
      border: none;
  }
@@ -1011,7 +1012,65 @@ p{font-size: 12px;
         text-decoration-skip-ink: none;
         color: #4d5ae5;
     }
-}
+}  */
+ /* 5 поле Checkbox */
+
+ .check-input-label {
+     margin-bottom: 24px;
+ }
+
+ .check-box {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     width: 16px;
+     height: 16px;
+     border-radius: 2px;
+     border: 1px solid rgba(46, 47, 66, 0.4);
+     margin-right: 8px;
+     fill: transparent;
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .visually-hidden {
+     position: absolute;
+     opacity: 0;
+     pointer-events: none;
+ }
+
+ .icon-check {
+     fill: transparent;
+ }
+
+ /* checked-стан */
+ .check:checked+.check-box {
+     background-color: var(--accent-color, #404bbf);
+     border: none;
+ }
+
+ .check:checked+.check-box .icon-check {
+     fill: var(--light-color, #f4f4fd);
+ }
+
+ /* Label */
+ .form-label {
+     font-size: 12px;
+     line-height: 1.17;
+     letter-spacing: 0.04em;
+     color: #8e8f99;
+     display: flex;
+     align-items: center;
+ }
+
+ /* Посилання */
+ .form-label a {
+     line-height: 1.33333;
+     text-decoration: underline;
+     text-decoration-skip-ink: none;
+     color: var(--link-color, #4d5ae5);
+ }
 
  /* Button */
 .button-info {
@@ -1036,6 +1095,6 @@ p{font-size: 12px;
     border-radius: 4px;
     padding: 16px 32px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: none;   
    }
