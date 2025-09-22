@@ -705,6 +705,7 @@ p{font-size: 12px;
 .footer-form{
     display: flex;
     gap: 24px;
+   
 }
 .footer-input {
     font-family: "Roboto", sans-serif;
@@ -845,18 +846,30 @@ p{font-size: 12px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/*----- зміна fill, border---- */
-.button-modal-close:hover,
-.button-modal-close:focus {
+/* Статичний стан кнопки */
+.button-modal-close {
     border: none;
-    fill: #ffffff;
-    background-color: #404bbf;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   }
-.button-icon{
+    background-color: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-icon {
+    fill: #000000;
+    /* початковий колір */
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Ховер і фокус кнопки */
+.button-modal-close:hover,
+.button-modal-close:focus {
+    background-color: #404bbf;
+}
+
+/* Окремо — колір іконки при ховері та фокусі */
+.button-modal-close:hover>.button-icon,
+.button-modal-close:focus>.button-icon {
+    fill: #ffffff;
+}
 /* Modal-text */
 .modal-text {
     font-weight: 500;
@@ -1043,9 +1056,17 @@ p{font-size: 12px;
      pointer-events: none;
  }
 
- .icon-check {
-     fill: transparent;
- }
+.form-link {
+    color: #4d5ae5;
+    /* приклад */
+    text-decoration: underline;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-link:hover,
+.form-link:focus {
+    color: #404bbf;
+}
 
  /* checked-стан */
  .check:checked+ .form-label>.check-box {
