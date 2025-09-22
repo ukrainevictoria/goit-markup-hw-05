@@ -857,6 +857,7 @@ p{font-size: 12px;
 .button-modal-close:hover,
 .button-modal-close:focus {
     background-color: #404bbf;
+    border: none;
 }
 
 /* Окремо — колір іконки при ховері та фокусі */
