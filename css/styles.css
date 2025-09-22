@@ -1057,10 +1057,10 @@ p{font-size: 12px;
  }
 
 .form-link {
-    color: #4d5ae5;
-    /* приклад */
+    background-color: #e7e9fc;
     text-decoration: underline;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .form-link:hover,
